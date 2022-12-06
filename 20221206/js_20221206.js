@@ -8,3 +8,11 @@ function if_else(num) {
 }
 
 console.log(if_else(4));
+
+/*Funkcija grąžins true, jei parametro amžius yra didesnis nei 18 metų.*/
+
+function ageRestriction(age) {
+    return age > 18 ? true : false;
+}
+
+console.log(ageRestriction(14));
