@@ -24,3 +24,21 @@ console.assert(alphabetOrder('thisisgreatstring') == 'aegghiiinrrsssttt', "Faile
 function alphabetOrder(word) {
     return word.split("").sort().join("");
 }
+
+
+/* Parašykite funkciją pluspluskuri priima 2 parametrus:
+
+1. skaičius	
+2. kiek kartu prie šio skaičiaus reikia pridėti 1
+
+Pvz.: plusPlus(10, 3) grąžina 13. Svarbu: turi pridėti butent 1, o ne tesiog sudėti du skaičius
+*/
+
+function additive(num, numToAdd) {
+    for (i=0; i < numToAdd; i++) {
+        num++;
+    }
+    return num;
+}
+
+console.log(additive(1,5));
