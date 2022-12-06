@@ -16,3 +16,11 @@ function ageRestriction(age) {
 }
 
 console.log(ageRestriction(14));
+
+/* Parašykite „JavaScript“ funkciją, kuri grąžina perduotą eilutę su raidėmis abėcėlės tvarka.*/
+
+console.assert(alphabetOrder('thisisgreatstring') == 'aegghiiinrrsssttt', "Failed");
+
+function alphabetOrder(word) {
+    return word.split("").sort().join("");
+}
