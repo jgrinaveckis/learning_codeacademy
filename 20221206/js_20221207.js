@@ -1,5 +1,5 @@
 function additive(num, numToAdd) {
-    if (numToAdd >= 1) {
+    if (numToAdd > 0) {
         num++;
         numToAdd--;
         return additive(num, numToAdd);
