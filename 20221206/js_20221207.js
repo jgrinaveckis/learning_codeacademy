@@ -4,7 +4,6 @@ function additive(num, numToAdd) {
         numToAdd--;
         return additive(num, numToAdd);
     }
-
     return num;
 }
 
