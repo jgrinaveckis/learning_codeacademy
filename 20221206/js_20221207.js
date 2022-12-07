@@ -4,9 +4,8 @@ function additive(num, numToAdd) {
         numToAdd--;
         return additive(num, numToAdd);
     }
-    else {
-        return num;
-    }
+
+    return num;
 }
 
-console.log(additive(1,5));
+console.log(additive(2,5));
