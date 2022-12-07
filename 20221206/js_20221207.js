@@ -4,7 +4,7 @@ function additive(num, numToAdd) {
         numToAdd--;
         return additive(num, numToAdd);
     }
-    else if (numToAdd === 0) {
+    else {
         return num;
     }
 }
