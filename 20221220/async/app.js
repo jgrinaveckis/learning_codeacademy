@@ -25,6 +25,7 @@ function updateTable(posts, users) {
 
     let nameOfPosterHead = document.createElement("th");
     nameOfPosterHead.textContent = "Name";
+
     tableHeadRow.append(nameOfPosterHead);
     postHeaders.forEach(header => {
         let newHeader = document.createElement("th");
@@ -52,11 +53,9 @@ function updateTable(posts, users) {
     });
 }
 
-
-
 getResponse('https://jsonplaceholder.typicode.com/users')
         .then(usersData => parseUsers(usersData))
         .then(users => {
             getResponse('https://jsonplaceholder.typicode.com/posts')
-            .then(postsData => { updateTable(postsData, users)})
+            .then(postsData => { updateTable(postsData, users) })
         });
