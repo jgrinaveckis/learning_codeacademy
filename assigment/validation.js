@@ -48,6 +48,14 @@ function pageChecker() {
         inputToBlock.disabled = false;
     });
 
+    const imageChange = document.getElementById("imageChange");
+    imageChange.addEventListener("mouseover", () => {
+        imageChange.src = "https://i.imgur.com/0DElr0H.jpg";
+    });
+
+    imageChange.addEventListener("mouseout", () => {
+        imageChange.src = "https://i.imgur.com/PLDVxza.jpg";
+    });
 }
 
 function changeText(element, type) {
