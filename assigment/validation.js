@@ -79,7 +79,6 @@ function pageChecker() {
     let bordersChildren = [...listOfBorders.children];
     bordersChildren.forEach(child => {
         child.firstChild.addEventListener("click", () => {
-            console.log("3px solid" + child.firstChild.value);
             blockToChange.style.border = "2px dotted " + child.firstChild.value;
         });
     });
