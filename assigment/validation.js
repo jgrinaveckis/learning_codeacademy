@@ -16,11 +16,11 @@ function pageChecker() {
         })
     }
 
-    let buttonSave = document.getElementById("buttonSave");
-    let insertEmail = document.getElementById("insertEmail");
-    let validateEmail = document.getElementById("validateEmail");
-    let insertPhone = document.getElementById("insertPhone");
-    let validatePhone = document.getElementById("validatePhone");
+    const buttonSave = document.getElementById("buttonSave");
+    const insertEmail = document.getElementById("insertEmail");
+    const validateEmail = document.getElementById("validateEmail");
+    const insertPhone = document.getElementById("insertPhone");
+    const validatePhone = document.getElementById("validatePhone");
 
     buttonSave.addEventListener("click", () => {
         clearValidationErrors();
@@ -34,7 +34,20 @@ function pageChecker() {
             validatePhone.removeAttribute("hidden");
             insertPhone.classList.add("border-danger");
         }
-    })
+    });
+
+    const inputToBlock = document.getElementById("blockUnblockInput");
+    const blockButton = document.getElementById("blockButton");
+    const unblockButton = document.getElementById("unblockButton");
+
+    blockButton.addEventListener("click", () => {
+        inputToBlock.disabled = true;
+    });
+    
+    unblockButton.addEventListener("click", () => {
+        inputToBlock.disabled = false;
+    });
+
 }
 
 function changeText(element, type) {
