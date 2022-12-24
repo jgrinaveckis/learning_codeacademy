@@ -56,6 +56,34 @@ function pageChecker() {
     imageChange.addEventListener("mouseout", () => {
         imageChange.src = "https://i.imgur.com/PLDVxza.jpg";
     });
+
+    const blockToChange = document.getElementById("divToChange");
+
+    const listOfCursors = document.getElementById("listOfCursors");
+    let cursorsChildren = [...listOfCursors.children];
+    cursorsChildren.forEach(child => {
+        child.firstChild.addEventListener("click", () => {
+            document.querySelector("body").style.cursor = child.firstChild.value;
+        });
+    });
+
+    const listOfColors = document.getElementById("listOfColors");
+    let colorsChildren = [...listOfColors.children];
+    colorsChildren.forEach(child => {
+        child.firstChild.addEventListener("click", () => {
+            blockToChange.style.color = child.firstChild.value;
+        });
+    });
+
+    const listOfBorders = document.getElementById("listOfBorders");
+    let bordersChildren = [...listOfBorders.children];
+    bordersChildren.forEach(child => {
+        child.firstChild.addEventListener("click", () => {
+            console.log("3px solid" + child.firstChild.value);
+            blockToChange.style.border = "2px dotted " + child.firstChild.value;
+        });
+    });
+
 }
 
 function changeText(element, type) {
