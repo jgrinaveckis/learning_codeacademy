@@ -83,6 +83,11 @@ function pageChecker() {
         });
     });
 
+    const buttonReset = document.getElementById("buttonReset");
+    buttonReset.addEventListener("click", () => {
+        removeAllFormatting(blockToChange);
+    });
+
 }
 
 function changeText(element, type) {
@@ -140,5 +145,11 @@ function clearValidationErrors(){
     // Clear danger borders
     let errorBorders = document.querySelectorAll(".my-form .border-danger");
     errorBorders.forEach(input => { input.classList.remove("border-danger"); });
+}
+
+function removeAllFormatting(elementToChange) {
+    elementToChange.style.removeProperty('border');
+    elementToChange.style.removeProperty('color');
+    document.querySelector("body").style.removeProperty('cursor');
 }
 pageChecker();

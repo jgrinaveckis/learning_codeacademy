@@ -89,7 +89,7 @@
                 </ul>
             </div>
             <div class="card-body text-center">
-                <img width="200" height="200" src="https://i.imgur.com/PLDVxza.jpg" class="monkyImg" id="imageChange">
+                <img width="200" height="200" src="https://i.imgur.com/PLDVxza.jpg" class="monkyImg" id="imageChange" referrerpolicy="no-referrer">
             </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -131,7 +131,30 @@
                     
                     </ul>
                 </div>
-                <button type="button" class="btn btn-success" id="resetBorder">Reset all</button>
+                <button type="button" class="btn btn-success" id="buttonReset">Reset all</button>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header p-3">
+                <span class="align-middle">Paspaudus mygtuką parodykite informaciją apie save modaliniame lange</span>
+            </div>
+            <div class="card-body text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
+            </div>
+        </div>
+        <div class="modal" id="modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal is here</h5>
+                    </div>
+                    <div class="modal-body">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio placeat facilis mollitia consequuntur optio veritatis ipsa sunt deleniti. Numquam eligendi quisquam soluta recusandae qui ducimus beatae, dignissimos nisi porro est!</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
