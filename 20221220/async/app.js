@@ -49,7 +49,7 @@ function updateTable(posts, users) {
             cell.textContent = item;
             row.append(cell);
         }
-        table.append(row)
+        table.append(row);
     });
 }
 
