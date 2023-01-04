@@ -23,7 +23,7 @@ placeInput.addEventListener('input', debounce(function() {
 
 					for (let forecast of forecasts) {
 						let forecastDiv = document.createElement('div');
-						forecastDiv.classList.add('w-25', 'border', 'border-dark');
+						forecastDiv.classList.add('w-25', 'border', 'border-dark', 'p-1');
 
 						let timestampP = document.createElement('p');
 						timestampP.innerHTML = `Time: ${forecast['forecastTimeUtc']}`;
@@ -36,9 +36,10 @@ placeInput.addEventListener('input', debounce(function() {
 						conditionP.innerHTML = `Condition: ${forecast['conditionCode']} `;
 
 						const paragraphs = document.querySelectorAll('div > p');
-						for (let p of paragraphs) {
-							p.classList.add('mb-0');
-						}
+						paragraphs.forEach((p) => {
+							p.classList.add('mb-0', 'p-1');
+						});
+							
 						forecastDiv.appendChild(timestampP);
 						forecastDiv.appendChild(temperatureP);
 						forecastDiv.appendChild(conditionP);
