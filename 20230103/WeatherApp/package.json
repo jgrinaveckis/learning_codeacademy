@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/jgrinaveckis/learning_codeacademy.git"
   },
-  "author": "hello@nonamez.name",
+  "author": "Justas Grinaveckis",
   "license": "Beerware",
   "bugs": {
     "url": "https://github.com/jgrinaveckis/learning_codeacademy/issues"
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "laravel-mix": "^6.0.6",
-    "nodemon": "^2.0.19",
+    "nodemon": "^2.0.20",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0"
