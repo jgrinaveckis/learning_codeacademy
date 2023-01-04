@@ -13,16 +13,22 @@ module.exports.getPlaces = function() {
 }
 
 
-module.exports.getWeatherInfo = function(cityCode) {
+module.exports.getForecastInfo = function(cityCode) {
 	return new Promise(function(resolve) {
 		request.get(`https://api.meteo.lt/v1/places/${cityCode}/forecasts/${FORECAST_TYPE[0]}`).then(response => {
-			let forecasts = JSON.parse(response.body);
-			temp = {};
-			temp["forecastTimeUtc"] = forecasts["place"]['forecastTimeUtc']
-			temp["airTemperature"] = forecasts["place"]['airTemprature']
-			temp["feelsLikeTemperature"] = forecasts["place"]['feelsLikeTemperature']
-			temp["conditionCode"] = forecasts["place"]['conditionCode']
-			resolve(temp);
+			let retrieve = JSON.parse(response.body);
+			let forecasts = retrieve["forecastTimestamps"];
+			let results = [];
+
+			forecasts.forEach((forecast) => {
+				temp = {};
+				temp["forecastTimeUtc"] = forecast['forecastTimeUtc'];
+				temp["airTemperature"] = forecast['airTemprature'];
+				temp["feelsLikeTemperature"] = forecast['feelsLikeTemperature'];
+				temp["conditionCode"] = forecast['conditionCode'];
+				results.push(temp);
+			});
+			resolve(results);
 		});
 	});
 }

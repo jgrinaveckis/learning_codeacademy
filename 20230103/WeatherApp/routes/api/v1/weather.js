@@ -11,8 +11,8 @@ router.get('/places/find/:name', function(req, res, next) {
 	});
 });
 
-router.get('/weather/find/:code', function(req, res, next) {
-	MeteoApiService.getWeatherInfo(req.params.code).then(forecast => {
+router.get('/get/forecast/:code', function(req, res, next) {
+	MeteoApiService.getForecastInfo(req.params.code).then(forecast => {
 		res.json(forecast);
 	});
 });
