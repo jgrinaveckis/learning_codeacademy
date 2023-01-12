@@ -9,7 +9,7 @@
     <body>
         <h1>Registracija į kursus</h1>
         <hr>
-        <form action="app.php" method="POST">
+        <form action="app.php" method="POST" id="form">
         <label for="name">Vardas:</label>
         <input type="text" name="name">
         </br>
@@ -22,18 +22,19 @@
             <option value="Sydney">Sydney</option>
         </select>
         <h2>Programavimo kalba:</h2>
-        <label for="C++">C++</label>
-        <input type="checkbox" name="language[]" id="C++" value="C++">
+        <label for="C">C++</label>
+        <input type="checkbox" name="language" id="C" value="C">
         <br>
         <label for="PHP">php</label>
-        <input type="checkbox" name="language[]" id="PHP" value="PHP">
+        <input type="checkbox" name="language" id="PHP" value="PHP">
         <br>
         <label for="Python">Python</label>
-        <input type="checkbox" name="language[]" id="Python" value="Python">
+        <input type="checkbox" name="language" id="Python" value="Python">
         <br>
         <h2>Papildoma info</h2>
         <textarea name="extra" id="info" cols="30" rows="10"></textarea>
-        <button type="submit">Siusti</button>
+        <button type="submit" id ='submitButton'>Siusti</button>
         </form>
+        <script src="submit.js"></script>
     </body>
 </html>

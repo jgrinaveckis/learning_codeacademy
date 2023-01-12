@@ -1,3 +1,8 @@
 <?php
 
-var_dump($_POST);
+$data = [];
+
+$name = $_POST['name'];
+$city = $_POST['city'];
+
+echo "Sveikiname " . $name . " iš " . $city . " užsiregistravus";
