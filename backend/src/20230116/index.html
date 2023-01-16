@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registracija į kursus</h2>
+    <hr>
+    <form method="POST" action="app.php" enctype="multipart/form-data">
+        <p>
+            <label for="name">Vardas:</label>
+            <input type="text" name="user[name]" id="name">
+        </p>
+
+        <p>
+            <label for="surname">Pavardė:</label>
+            <input type="text" name="user[surname]" id="surname">
+        </p>
+
+        <p>
+            <label for="city">Miestas:</label>
+            <select name="user[city]" id="city">
+                <option value="Vilnius">Vilnius</option>
+                <option value="Kaunas">Kaunas</option>
+                <option value="Klaipeda">Klaipėda</option>
+            </select>
+        </p>
+
+        <h3>Programavimo kalba:</h3>
+
+        <label for="cplusplus">C++</label>
+        <input type="checkbox" id="cplusplus" name="langs[]" value="C++">
+        
+        <br>
+        
+        <label for="php">PHP</label>
+        <input type="checkbox" id="php" name="langs[]" value="PHP">
+        
+        <br>
+        
+        <label for="python">Python</label>
+        <input type="checkbox" id="python" name="langs[]" value="Python">
+
+        <h4>Papildoma informacija</h4>
+
+        <p>
+            <textarea rows="4" cols="35" placeholder="Valio" name="extraInfo"></textarea>
+        </p>
+
+        <h4>Įkelkite nuotrauką</h4>
+        <input type="file" name="photos[]" multiple>
+
+        <button type="submit" id="submitButton">Siųsti</button>
+    </form>
+    <script src="submit.js"></script>
+</body>
+</html>
