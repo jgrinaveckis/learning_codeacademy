@@ -1,0 +1,32 @@
+{
+  "name": "session",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgrinaveckis/learning_codeacademy.git"
+  },
+  "author": "hello@nonamez.name",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/jgrinaveckis/learning_codeacademy/issues"
+  },
+  "homepage": "https://github.com/jgrinaveckis/learning_codeacademy#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^12.6.0"
+  },
+  "main": "webpack.mix.js",
+  "description": ""
+}
