@@ -1,0 +1,93 @@
+Array
+(
+    [results] => Array
+        (
+            [0] => Array
+                (
+                    [gender] => male
+                    [name] => Array
+                        (
+                            [title] => Mr
+                            [first] => Thilo
+                            [last] => Valentin
+                        )
+
+                    [location] => Array
+                        (
+                            [street] => Array
+                                (
+                                    [number] => 5283
+                                    [name] => Raiffeisenstraße
+                                )
+
+                            [city] => Arneburg
+                            [state] => Bremen
+                            [country] => Germany
+                            [postcode] => 55190
+                            [coordinates] => Array
+                                (
+                                    [latitude] => -49.5225
+                                    [longitude] => -31.5799
+                                )
+
+                            [timezone] => Array
+                                (
+                                    [offset] => +1:00
+                                    [description] => Brussels, Copenhagen, Madrid, Paris
+                                )
+
+                        )
+
+                    [email] => thilo.valentin@example.com
+                    [login] => Array
+                        (
+                            [uuid] => ee78c048-0096-47ab-81f6-23e855882243
+                            [username] => yellowgorilla254
+                            [password] => annika
+                            [salt] => daKyEPQI
+                            [md5] => 4dad2ccca14eb07d4344c24996842dc3
+                            [sha1] => 1f0d2ca30e4257c6d50b0cfd88ecdf5a19b7ff10
+                            [sha256] => 4bb3cf10df09f282d337f2af2756065472eac46afe083fe9a4fb5718ace6b96b
+                        )
+
+                    [dob] => Array
+                        (
+                            [date] => 1956-02-04T03:05:54.830Z
+                            [age] => 66
+                        )
+
+                    [registered] => Array
+                        (
+                            [date] => 2020-12-09T00:24:45.724Z
+                            [age] => 2
+                        )
+
+                    [phone] => 0335-5113127
+                    [cell] => 0171-6943662
+                    [id] => Array
+                        (
+                            [name] => SVNR
+                            [value] => 50 030256 V 298
+                        )
+
+                    [picture] => Array
+                        (
+                            [large] => https://randomuser.me/api/portraits/men/52.jpg
+                            [medium] => https://randomuser.me/api/portraits/med/men/52.jpg
+                            [thumbnail] => https://randomuser.me/api/portraits/thumb/men/52.jpg
+                        )
+
+                    [nat] => DE
+                )
+
+        )
+
+    [info] => Array
+        (
+            [seed] => 089c0e37864c79ad
+            [results] => 1
+            [page] => 1
+            [version] => 1.4
+        )
+
+)

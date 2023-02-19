@@ -21,7 +21,6 @@ function collectAsFormData() {
         }
     });
 
-    
     return formData;
 }
 
