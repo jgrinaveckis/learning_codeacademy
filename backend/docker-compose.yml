@@ -25,5 +25,3 @@ services:
         volumes:
             - ./src:/app
         # tty: true
-        # env_file:
-        #     - ./src/2023-01-30/cv/.env

@@ -2,7 +2,7 @@ const redirectButton = document.getElementById('button-redirect');
 const urlInput = document.getElementById('input-url');
 
 redirectButton.addEventListener('click', function () {
-    sendData();
+    fetchAndSendData();
 });
 
 async function fetchAndSendData(){
@@ -20,11 +20,11 @@ async function fetchAndSendData(){
 
     const respData = resp.json()
     if(respData.status == 'success'){
-        addToTable(responseData.results);
-    } else if (responseData.status == 'duplicate') {
-        alert('Url already shortened to: ' + responseData.results);
+        addToTable(respData.results);
+    } else if (respData.status == 'duplicate') {
+        alert('Url already shortened to: ' + respData.results);
     } else {
-        alert('Error: ' + responseData.message);
+        alert(respData.message);
     }
 }
 
@@ -32,11 +32,9 @@ function addToTable(data){
     let tbody = document.getElementById('tbody');
     let tr = document.createElement('tr');
     let thURL = document.createElement('th');
-    let thID = document.createElement('th');
-    let thNumber = document.createElement('th');
+    let codeTh = document.createElement('th');
     tr.scope='row';
-    thNumber.textContent = parseInt(tbody.lastElementChild.firstElementChild.textContent) + 1;
-    thID.textContent = data.id;
+    codeTh.textContent = data.code;
     thURL.textContent = data.url;
     tr.append(thNumber,thID,thURL);
     tbody.append(tr);

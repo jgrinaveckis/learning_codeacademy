@@ -2,31 +2,30 @@
 
 $filePlace = './files/urllist.json';
 
-require_once 'classes/SessionHandler.php';
+require_once 'utils/SessionHandler.php';
 $session = new SessionHandler(10, 60);
 
 if ($session->isLimitReached()) {
     serveData('Too Many Requests', 429, 'error');
 }
 
-require_once 'utils/RandomId.php';
+require_once 'utils/RandomString.php';
 if (!isset($_POST['urlForRedirection'])) {
     throw new Exception('URL wasnt provided');
 }
+$urlForRedirection = $_POST['urlForRedirection'];
 
 if (!file_exists($filePlace)) {
     file_put_contents($filePlace, '');
 }
 
-
 $data = file_get_contents($filePlace);
 $data = json_decode($data, true);
 $generatedCode = RandomId::generateRandomString(6);
-$urlForRedirection = $_POST['urlForRedirection'];
-foreach ($data as $row) {
 
+foreach ($data as $row) {
     if ($row['url'] == $urlForRedirection) {
-        serveData($row['id'], 200, 'duplication');
+        serveData($row['code'], 200, 'duplication');
     }
 }
 
@@ -37,7 +36,7 @@ if (!array_key_exists($generatedCode, $data) && !in_array($urlForRedirection, $d
     serveData($newRow, 200, 'success');
 }
 
-function serveData($redirectionUrl, $code = 400, $status = 'error')
+function serveData($redirectionUrl, $code, $status)
 {
     $result = [
         'status' => $status,

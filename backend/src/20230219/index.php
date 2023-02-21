@@ -34,7 +34,35 @@
                 </form>
             </div>
         </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Shortened URL</th>
+                    <th scope="col" colspan='2'>URL</th>
+                </tr>
+            </thead>
+            <tbody id='tbody'>
+                <!-- generate some trows -->
+                <?php
+
+                $filePath = 'files/urllist.json';
+                if (!file_exists($filePath)) {
+                    file_put_contents($filePath, '');
+                }
+                $data = file_get_contents($filePath);
+                $data = json_decode($data, true);
+                foreach ($data as $key => $value) {
+                    echo '<tr>';
+                    echo '<td scope="row">'. $key+1 .'</td>';
+                    echo '<td><a href="http://localhost/src/20230219/redirect.php?code='.$value['code'].'">'.$value['code'].'</a></td>';
+                    echo '<td>'.$value['url'].'</td>';
+                    echo '</tr>';
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
 </body>
 </html>
